@@ -1,0 +1,22 @@
+node_modules
+.next
+
+# Ignore all log files and logs directory
+logs
+*.log
+logs/
+
+# Ignore all .env files
+.env
+.env.local
+.env.development
+.env.test
+# Ignore all .DS_Store files (macOS)
+.DS_Store
+
+# Ignore all .vscode files
+.vscode/
+# Ignore all .idea files (JetBrains IDEs)
+.idea/
+.next/
+dist/

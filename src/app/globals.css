@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #FDF8F2;
+  --peach-gradient-end: #FFE1DA;
+  --navy: #1F2235;
+  --text-cream: #FEE3DC;
+  --orange-cta: #FFA053;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(0deg, #FDF8F2 0%, #FFE1DA 102.37%);
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #1F2235;
+  overflow-x: hidden;
+}
+
+/* PP Editorial New fallback — use Playfair Display as closest web font match */
+.font-editorial {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  letter-spacing: -0.02em;
+}
+
+.font-editorial-italic {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* Scroll indicator animation */
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+.scroll-line-animate {
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+/* Slide-in animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-left  { animation: slideInLeft  0.7s cubic-bezier(0.22,1,0.36,1) forwards; }
+.animate-slide-right { animation: slideInRight 0.7s cubic-bezier(0.22,1,0.36,1) forwards; }
+.animate-fade-up     { animation: fadeUp       0.6s cubic-bezier(0.22,1,0.36,1) forwards; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
